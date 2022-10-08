@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="CSS/info-page.css" />
+    <link rel="stylesheet" href="CSS/destinations.css" />
+  </head>
+  <body>
+    <section class="hero is-fullheight is-flex">
+      <div class="hero-head">
+        <div class="columns is-mobile is-marginless">
+          <div class="column left is-flex">
+            <div class="navbar-brand is-align-content-center">
+              <a class="navbar-item" href="index.html">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="column center">
+            <div id="navbar" class="navbar-menu">
+              <a class="navbar-item" href="#"> Home </a>
+              <a class="navbar-item" href="about.html"> About </a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-active"> Destinations </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item is-active" href="destinations.html">
+                    Visit Locations!
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item" href="new-entries.html">
+                    New Entries
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column right is-flex is-justify-content-flex-end">
+            <div class="navbar-item desktop">
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </span>
+              <br />
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </span>
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </span>
+            </div>
+
+            <div class="navbar-brand">
+              <a
+                role="button"
+                class="navbar-burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbar"
+                href="./info-page.html"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-body is-flex-direction-column">
+        <div id="weatherBox" class="box">Weather Box</div>
+        <div ><img class="weatherIcon" /></div>
+        <div class="columns is-multiline" id="cardContainer"></div>
+      </div>
+    </section>
+    <script src="./JS/destinations.js"></script>
+  </body>
+</html>

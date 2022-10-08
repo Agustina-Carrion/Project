@@ -1,0 +1,67 @@
+[
+  {
+    "city": "Dublin",
+    "image": "./Images/Polaroid Cards/Dublin.png",
+    "imageAltText": "Dublin - Ireland",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Sunny Ireland",
+    "date": "Sometime in 2017",
+    "description": "Hodor hodor; hodor hodor - hodor. Hodor, hodor hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor... ",
+    "link": "Read more"
+  },
+  {
+    "city": "London",
+    "image": "./Images/Polaroid Cards/London.png",
+    "imageAltText": "London - England",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "A Famous Bridge",
+    "date": "Nov 2018",
+    "description": "Lorem ipsum dolor amet mustache knausgaard, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag.",
+    "link": "Read more"
+  },
+  {
+    "city": "Kilkenny",
+    "image": "./Images/Polaroid Cards/Kilkenny.png",
+    "imageAltText": "Kilkenny - Ireland",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "One Last Pub (?)",
+    "date": "Honestly, can't remember",
+    "description": "Bacon ipsum dolor amet short ribs brisket venison rump drumstick pig sausage prosciutto chicken spare ribs salami picanha doner.",
+    "link": "Read more"
+  },
+  {
+    "city": "Palermo",
+    "image": "./Images/Polaroid Cards/Palermo.png",
+    "imageAltText": "Palermo - Italy",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Paradise?",
+    "date": "May 2019",
+    "description": "Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit leo. Carpe diem vulputate est nec commodo rutrum.",
+    "link": "Read more"
+  },
+  {
+    "city": "Buenos Aires",
+    "image": "./Images/Polaroid Cards/Jujuy.png",
+    "imageAltText": "Jujuy - Argentina",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Colourful Hornocal",
+    "date": "Jan 2022",
+    "description": " Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.",
+    "link": "Read more"
+  },
+  {
+    "image": "./Images/Polaroid Cards/Empty.png",
+    "imageAltText": "Placeholder Image",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "One For Future Trips",
+    "date": "Soon, please",
+    "description": "(Here comes a description) <br /> <br /> <a href=\"./new-entries.html\">Add me!</a> <br /> <br /> <time datetime=\"2016-1-1\">11:09 PM - 1 Jan 2016</time>",
+    "link": "Add Me"
+  }
+]

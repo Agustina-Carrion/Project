@@ -1,0 +1,8 @@
+div.card {
+  margin: 20px;
+}
+
+button.delete {
+  position: relative;
+  left: 100%;
+}

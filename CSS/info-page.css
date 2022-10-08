@@ -1,0 +1,33 @@
+* {
+  font-size: large;
+}
+
+.hero-head {
+  border-bottom: solid 2px #6f5553;
+  background: rgb(180, 146, 124);
+  background: linear-gradient(
+    270deg,
+    rgba(180, 146, 124, 1) 0%,
+    rgba(199, 112, 77, 1) 100%
+  );
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background-color: #d0b698;
+}
+
+.icon {
+  padding: 0 20px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Entries</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="CSS/info-page.css" />
+  </head>
+  <body>
+    <section class="hero is-fullheight">
+      <div class="hero-head">
+        <div class="columns is-mobile is-marginless">
+          <div class="column left is-flex">
+            <div class="navbar-brand is-align-content-center">
+              <a class="navbar-item" href="index.html">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="column center">
+            <div id="navbar" class="navbar-menu">
+              <a class="navbar-item" href="info-page.html"> Home </a>
+              <a class="navbar-item is-active" href="about.html"> About </a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link"> Destinations </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="destinations.html">
+                    Visit Locations!
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item" href="#"> New Entries </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column right is-flex is-justify-content-flex-end">
+            <div class="navbar-item desktop">
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </span>
+              <br />
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </span>
+              <span class="icon">
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </span>
+            </div>
+
+            <div class="navbar-brand">
+              <a
+                role="button"
+                class="navbar-burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbar"
+                href="./info-page.html"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container is-fluid is-flex is-flex-direction-column is-justify-content-center">
+
+        <div class="columns">
+          <div class="column is-half">
+            <h1 style="font-family: 'Nanum Pen Script', cursive; font-size: 70px">New Post Entry</h1>
+            <form> 
+              <div class="field">
+                <label class="label">Name of the Post</label>
+                <div class="control">
+                  <input id="inputNamePost" class="input" type="text" placeholder="Text input" />
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Date</label>
+                <div class="control has-icons-left">
+                  <input id="inputDatePost" class="input" type="date" placeholder="Date input" />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Upload Photo</label>
+                <div class="file">
+                  <label class="file-label">
+                    <input id="inputPhoto" class="file-input" type="file" name="photo" />
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fa fa-upload"></i>
+                      </span>
+                      <span class="file-label"> Choose a photo… </span>
+                  </label>
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                  <textarea id="descriptionNewPost" class="textarea" placeholder="Text"></textarea>
+                </div>
+              </div>
+    
+              <div class="field is-grouped">
+                <div class="control">
+                  <button id="submitNewPost" class="button is-link" >Submit</button>
+                </div>
+                <div class="control">
+                  <button id="cancelNewPost" class="button is-link is-light">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="column is-half">
+            <h1 style="font-family: 'Nanum Pen Script', cursive; font-size: 70px">List of New Entries</h1>
+            <div class="box">
+              <ul id="newEntriesList"></ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+   
+    </section>
+    <script src="./JS/new-entries.js"></script>
+  </body>
+</html>
