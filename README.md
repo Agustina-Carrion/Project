@@ -2,6 +2,8 @@
 
 Travel Blog project:
 
+Bulma framework used. 
+
 Basic elements in (use of JSON file, localstorage and weather fetched from OpenWeatherAPI)
 
 Bonus elements:
