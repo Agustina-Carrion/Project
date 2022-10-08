@@ -2,7 +2,9 @@
   font-size: large;
 }
 
-.hero-head {
+.hero-head,
+.footer {
+  border-top: solid 2px #6f5553;
   border-bottom: solid 2px #6f5553;
   background: rgb(180, 146, 124);
   background: linear-gradient(
@@ -10,6 +12,7 @@
     rgba(180, 146, 124, 1) 0%,
     rgba(199, 112, 77, 1) 100%
   );
+  padding: 20px;
 }
 
 @media (max-width: 1024px) {
