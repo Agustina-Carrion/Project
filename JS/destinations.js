@@ -87,7 +87,12 @@ cardContainer.addEventListener("click", function (event) {
     return;
   }
   const index = event.target.dataset.index;
-  cards.splice(index, 1);
+
+  const result = confirm("Do you REALLY want to delete this card?");
+  if (result) {
+    cards.splice(index, 1);
+  }
+
   renderCards();
   // console.log(event.target);
   // alert(event.target.dataset.index);

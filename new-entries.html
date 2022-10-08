@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Entries</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -83,73 +83,95 @@
           </div>
         </div>
       </div>
-  
-      <div class="container is-fluid is-flex is-flex-direction-column is-justify-content-center">
 
+      <div
+        class="container is-fluid is-flex is-flex-direction-column is-justify-content-center"
+      >
         <div class="columns">
           <div class="column is-half">
-            <h1 style="font-family: 'Nanum Pen Script', cursive; font-size: 70px">New Post Entry</h1>
-            <form> 
+            <h1
+              style="font-family: 'Nanum Pen Script', cursive; font-size: 70px"
+            >
+              New Post Entry
+            </h1>
+            <form>
               <div class="field">
                 <label class="label">Name of the Post</label>
                 <div class="control">
-                  <input id="inputNamePost" class="input" type="text" placeholder="Text input" />
+                  <input
+                    id="inputNamePost"
+                    class="input"
+                    type="text"
+                    placeholder="Text input"
+                  />
                 </div>
               </div>
-    
+
               <div class="field">
                 <label class="label">Date</label>
                 <div class="control has-icons-left">
-                  <input id="inputDatePost" class="input" type="date" placeholder="Date input" />
+                  <input
+                    id="inputDatePost"
+                    class="input"
+                    type="date"
+                    placeholder="Date input"
+                  />
                   <span class="icon is-small is-left">
                     <i class="fa fa-calendar"></i>
                   </span>
                 </div>
               </div>
-    
+
               <div class="field">
                 <label class="label">Upload Photo</label>
-                <div class="file">
-                  <label class="file-label">
-                    <input id="inputPhoto" class="file-input" type="file" name="photo" />
-                    <span class="file-cta">
-                      <span class="file-icon">
-                        <i class="fa fa-upload"></i>
-                      </span>
-                      <span class="file-label"> Choose a photo… </span>
-                  </label>
+                <div class="control">
+                  <input
+                    id="inputPhoto"
+                    class="input"
+                    type="text"
+                    placeholder="Paste link"
+                  />
                 </div>
               </div>
-    
+
               <div class="field">
                 <label class="label">Description</label>
                 <div class="control">
-                  <textarea id="descriptionNewPost" class="textarea" placeholder="Text"></textarea>
+                  <textarea
+                    id="descriptionNewPost"
+                    class="textarea"
+                    placeholder="Text"
+                  ></textarea>
                 </div>
               </div>
-    
+
               <div class="field is-grouped">
                 <div class="control">
-                  <button id="submitNewPost" class="button is-link" >Submit</button>
+                  <button id="submitNewPost" class="button is-link">
+                    Submit
+                  </button>
                 </div>
                 <div class="control">
-                  <button id="cancelNewPost" class="button is-link is-light">Cancel</button>
+                  <button id="cancelNewPost" class="button is-link is-light">
+                    Cancel
+                  </button>
                 </div>
               </div>
             </form>
           </div>
 
           <div class="column is-half">
-            <h1 style="font-family: 'Nanum Pen Script', cursive; font-size: 70px">List of New Entries</h1>
+            <h1
+              style="font-family: 'Nanum Pen Script', cursive; font-size: 70px"
+            >
+              List of New Entries
+            </h1>
             <div class="box">
               <ul id="newEntriesList"></ul>
             </div>
           </div>
-
         </div>
-
       </div>
-   
     </section>
     <script src="./JS/new-entries.js"></script>
   </body>
