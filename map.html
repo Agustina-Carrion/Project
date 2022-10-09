@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="use-all-space">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tina's Travel Blog</title>
+    <title>World Map</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
       rel="stylesheet"
@@ -18,6 +21,36 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="CSS/info-page.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps.css"
+    />
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps-web.min.js"></script>
+    <style>
+      .hero {
+        background-color: #d0b698;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .title {
+        font-size: 75px;
+        font-weight: bold;
+        text-shadow: 2px 2px gray;
+        font-family: "Nanum Pen Script", cursive;
+      }
+      .button {
+        font-weight: bold;
+        box-shadow: 5px 5px;
+      }
+      #map {
+        width: 75vw;
+        height: 75vh;
+      }
+    </style>
   </head>
   <body>
     <section class="hero is-fullheight">
@@ -32,7 +65,7 @@
           </div>
           <div class="column center">
             <div id="navbar" class="navbar-menu">
-              <a class="navbar-item is-active" href="info-page.html"> Home </a>
+              <a class="navbar-item" href="info-page.html"> Home </a>
               <a class="navbar-item" href="about.html"> About </a>
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link"> Destinations </a>
@@ -46,7 +79,7 @@
                   </a>
                 </div>
               </div>
-              <a class="navbar-item" href="map.html"> Map </a>
+              <a class="navbar-item is-active" href="map.html"> Map </a>
             </div>
           </div>
           <div class="column right is-flex is-justify-content-flex-end">
@@ -92,69 +125,19 @@
           </div>
         </div>
       </div>
-
-      <div class="hero-body">
-        <div class="content px-4 py-4">
-          <h1 style="font-family: 'Nanum Pen Script', cursive; font-size: 70px">
-            Tina's Travel Blog
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <blockquote>
-            "It's a dangerous business, Frodo, going out your door. You step
-            onto the road, and if you don't keep your feet, there's no knowing
-            where you might be swept off to" - Bilbo by J.R.R. Tolkien
-          </blockquote>
-          <h3 style="font-family: 'Nanum Pen Script', cursive; font-size: 40px">
-            What you'll find...
-          </h3>
-          <p>
-            A pellentesque sit amet porttitor eget. Quam quisque id diam vel
-            quam
-            <strong>elementum</strong> pulvinar etiam non. Nam libero justo
-            laoreet sit. Mattis enim ut tellus elementum sagittis vitae et.
-            Mollis nunc sed id semper risus. Aliquam sem fringilla ut morbi
-            tincidunt augue interdum velit euismod. Mauris rhoncus aenean vel
-            elit scelerisque. Convallis a cras semper auctor neque vitae tempus
-            quam pellentesque. Pellentesque habitant morbi tristique senectus et
-            netus et.
-          </p>
-          <ul>
-            <li>
-              A list of <a href="destinations.html">destinations</a>. In
-              fermentum leo eu lectus mollis, quis dictum mi aliquet.
-            </li>
-            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-            <li>
-              Aliquam nec felis in sapien venenatis viverra fermentum nec
-              lectus.
-            </li>
-            <li>Ut non enim metus.</li>
-          </ul>
-          <h3 style="font-family: 'Nanum Pen Script', cursive; font-size: 40px">
-            Last but not least...
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="columns">
-            <div class="column center">
-              <figure class="images">
-                <img src="./Images/Polaroid Pics/1.png" style="width: 350px" />
-              </figure>
-            </div>
-            <div class="column center">
-              <figure class="images">
-                <img src="./Images/Polaroid Pics/2.png" style="width: 350px" />
-              </figure>
-            </div>
+      <div class="container is-paddingless is-fluid center">
+        <div class="columns is-multiline center">
+          <div
+            class="column is-one-third is-flex is-flex-direction-column is-align-items-center"
+          >
+            <h1 class="title">World Map</h1>
+            <button id="fetchLocations" class="button">
+              See Travel Destinations
+            </button>
           </div>
-          <figcaption class="center" id="imagesSubtext">
-            Figure 1: Some pictures from my trips!
-          </figcaption>
+          <div class="column is-two-thirds center">
+            <div id="map" class="map"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -166,5 +149,37 @@
         </p>
       </div>
     </footer>
+    <script>
+      const fetchLocations = document.querySelector("#fetchLocations");
+      const mapDiv = document.querySelector("#map");
+
+      let map = tt.map({
+        key: "fbREUaAPdvSqFX1DAmzjJZtvuuWeMrsz",
+        container: "map",
+        zoom: 1,
+      });
+
+      map.addControl(new tt.FullscreenControl());
+      map.addControl(new tt.NavigationControl());
+
+      let destinationsCoordinates = [];
+
+      fetchLocations.addEventListener("click", function () {
+        fetch("./destinations.json")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (result) {
+            destinationsCoordinates = result;
+            addMarker();
+          });
+      });
+
+      function addMarker() {
+        destinationsCoordinates.forEach(function (child) {
+          new tt.Marker().setLngLat(child).addTo(map);
+        });
+      }
+    </script>
   </body>
 </html>

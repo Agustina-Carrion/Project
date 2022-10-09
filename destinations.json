@@ -1,5 +1,7 @@
 [
   {
+    "lat": 53.3498006,
+    "lng": -6.2602964,
     "city": "Dublin",
     "image": "./Images/Polaroid Cards/Dublin.png",
     "imageAltText": "Dublin - Ireland",
@@ -11,6 +13,8 @@
     "link": "Read more"
   },
   {
+    "lat": 51.5073219,
+    "lng": -0.1276474,
     "city": "London",
     "image": "./Images/Polaroid Cards/London.png",
     "imageAltText": "London - England",
@@ -18,10 +22,11 @@
     "thumbnailAltText": "Placeholder Image",
     "name": "A Famous Bridge",
     "date": "Nov 2018",
-    "description": "Lorem ipsum dolor amet mustache knausgaard, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag.",
-    "link": "Read more"
+    "description": "Lorem ipsum dolor amet mustache knausgaard, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag."
   },
   {
+    "lat": 52.6510216,
+    "lng": -7.2484948,
     "city": "Kilkenny",
     "image": "./Images/Polaroid Cards/Kilkenny.png",
     "imageAltText": "Kilkenny - Ireland",
@@ -29,10 +34,11 @@
     "thumbnailAltText": "Placeholder Image",
     "name": "One Last Pub (?)",
     "date": "Honestly, can't remember",
-    "description": "Bacon ipsum dolor amet short ribs brisket venison rump drumstick pig sausage prosciutto chicken spare ribs salami picanha doner.",
-    "link": "Read more"
+    "description": "Bacon ipsum dolor amet short ribs brisket venison rump drumstick pig sausage prosciutto chicken spare ribs salami picanha doner."
   },
   {
+    "lat": 38.1112268,
+    "lng": 13.3524434,
     "city": "Palermo",
     "image": "./Images/Polaroid Cards/Palermo.png",
     "imageAltText": "Palermo - Italy",
@@ -40,19 +46,19 @@
     "thumbnailAltText": "Placeholder Image",
     "name": "Paradise?",
     "date": "May 2019",
-    "description": "Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit leo. Carpe diem vulputate est nec commodo rutrum.",
-    "link": "Read more"
+    "description": "Yolo ipsum dolor sit amet, consectetur adipiscing elit. Ut ac suscipit leo. Carpe diem vulputate est nec commodo rutrum."
   },
   {
+    "lat": -31.4173391,
+    "lng": -64.183319,
     "city": "Cordoba",
-    "image": "./Images/Polaroid Cards/Jujuy.png",
-    "imageAltText": "Jujuy - Argentina",
+    "image": "./Images/Polaroid Cards/Cordoba.png",
+    "imageAltText": "Cordoba - Argentina",
     "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
     "thumbnailAltText": "Placeholder Image",
-    "name": "Colourful Hornocal",
+    "name": "La Docta, Córdoba",
     "date": "Jan 2022",
-    "description": " Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds.",
-    "link": "Read more"
+    "description": " Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds."
   },
   {
     "image": "./Images/Polaroid Cards/Empty.png",
