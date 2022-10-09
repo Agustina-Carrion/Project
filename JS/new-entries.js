@@ -15,7 +15,7 @@ function fillList() {
   let lis = "";
   for (let i = 0; i < newEntries.length; i++) {
     const { name, date, photo, description } = newEntries[i];
-    lis += `<li>${name} , ${date} , ${photo} , ${description} <button data-pos="${i}">🗑</button><button data-pos="${i}">✍🏼</button><button id="saveButton">✅</button><button id="undoButton" disabled>⎌</button></li>`;
+    lis += `<li>${name} , ${date} , ${photo} , ${description} <button data-pos="${i}">🗑</button><button data-pos="${i}">✍🏼</button><button id="saveButton">✅</button></li>`;
   }
   newEntriesList.innerHTML = lis;
 }
