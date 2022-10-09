@@ -37,8 +37,6 @@ function createCard(card, index) {
   return cardTemplate;
 }
 
-let cards = [];
-
 function renderCards() {
   cardContainer.innerHTML = "";
   for (let i = 0; i < cards.length; i++) {
@@ -47,21 +45,6 @@ function renderCards() {
     fetchWeather(card.city);
   }
 }
-
-const cardContainer = document.querySelector("#cardContainer");
-const weatherIcon = document.querySelector(".weatherIcon");
-
-fetch("./destinations.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (result) {
-    cards = result;
-    renderCards();
-  })
-  .catch(function (error) {
-    alert("There's an error somewhere!");
-  });
 
 function fetchWeather(city) {
   fetch(
@@ -82,18 +65,33 @@ function fetchWeather(city) {
     });
 }
 
+let cards = [];
+
+const cardContainer = document.querySelector("#cardContainer");
+const weatherIcon = document.querySelector(".weatherIcon");
+
+fetch("./destinations.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (result) {
+    cards = result;
+    renderCards();
+  })
+  .catch(function (error) {
+    alert("There's an error somewhere!");
+  });
+
+
+
 cardContainer.addEventListener("click", function (event) {
   if (event.target.tagName !== "BUTTON") {
     return;
   }
   const index = event.target.dataset.index;
-
   const result = confirm("Do you REALLY want to delete this card?");
   if (result) {
     cards.splice(index, 1);
   }
-
   renderCards();
-  // console.log(event.target);
-  // alert(event.target.dataset.index);
 });
