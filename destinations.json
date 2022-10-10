@@ -1,5 +1,44 @@
 [
   {
+    "lat": 36.169941,
+    "lng": -115.139832,
+    "city": "Vegas",
+    "image": "./Images/Polaroid Cards/Vegas.png",
+    "imageAltText": "Las Vegas - USA",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Hip Hop International",
+    "date": "August 2012",
+    "description": "DIY pug forage, banjo pinterest salvia echo park. Pitchfork meh neutra church-key artisan affogato bitters tumblr pork belly hammock. ",
+    "link": "Read more"
+  },
+  {
+    "lat": 40.712776,
+    "lng": -74.005974,
+    "city": "Hollywood",
+    "image": "./Images/Polaroid Cards/Hollywood.png",
+    "imageAltText": "Hollywood - USA",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Visiting Stars",
+    "date": " September 2012",
+    "description": "Obi-Wan is here. The Force is with him. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. ",
+    "link": "Read more"
+  },
+  {
+    "lat": 21.161907,
+    "lng": -86.851524,
+    "city": "Cancun",
+    "image": "./Images/Polaroid Cards/Cancun.png",
+    "imageAltText": "Cancun - Mexico",
+    "thumbnail": "https://bulma.io/images/placeholders/96x96.png",
+    "thumbnailAltText": "Placeholder Image",
+    "name": "Blue Waters",
+    "date": "February 2015",
+    "description": "Donut tiramisu soufflé cookie jelly topping. Cheesecake jelly-o liquorice tart I love. Apple pie marshmallow sugar plum cake muffin I love donut. ",
+    "link": "Read more"
+  },
+  {
     "lat": 53.3498006,
     "lng": -6.2602964,
     "city": "Dublin",
