@@ -79,6 +79,7 @@
                 </div>
               </div>
               <a class="navbar-item is-active" href="map.html"> Map </a>
+              <a class="navbar-item" href="editpage.html"> Edit Page </a>
             </div>
           </div>
           <div class="column right is-flex is-justify-content-flex-end">
@@ -148,37 +149,6 @@
         </p>
       </div>
     </footer>
-    <script>
-      const fetchLocations = document.querySelector("#fetchLocations");
-      const mapDiv = document.querySelector("#map");
-
-      let map = tt.map({
-        key: "fbREUaAPdvSqFX1DAmzjJZtvuuWeMrsz",
-        container: "map",
-        zoom: 1,
-      });
-
-      map.addControl(new tt.FullscreenControl());
-      map.addControl(new tt.NavigationControl());
-
-      let destinationsCoordinates = [];
-
-      fetchLocations.addEventListener("click", function () {
-        fetch("./destinations.json")
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (result) {
-            destinationsCoordinates = result;
-            addMarker();
-          });
-      });
-
-      function addMarker() {
-        destinationsCoordinates.forEach(function (child) {
-          new tt.Marker().setLngLat(child).addTo(map);
-        });
-      }
-    </script>
+    <script src="./JS/map.js"></script>
   </body>
 </html>

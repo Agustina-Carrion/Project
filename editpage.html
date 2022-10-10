@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Destinations</title>
+    <title>Edit Page</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
       rel="stylesheet"
@@ -18,10 +18,9 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="CSS/info-page.css" />
-    <link rel="stylesheet" href="CSS/destinations.css" />
   </head>
   <body>
-    <section class="hero is-fullheight is-flex">
+    <section class="hero is-fullheight">
       <div class="hero-head">
         <div class="columns is-mobile is-marginless">
           <div class="column left is-flex">
@@ -36,9 +35,9 @@
               <a class="navbar-item" href="info-page.html"> Home </a>
               <a class="navbar-item" href="about.html"> About </a>
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link is-active"> Destinations </a>
+                <a class="navbar-link"> Destinations </a>
                 <div class="navbar-dropdown">
-                  <a class="navbar-item is-active" href="destinations.html">
+                  <a class="navbar-item" href="destinations.html">
                     Visit Locations!
                   </a>
                   <hr class="navbar-divider" />
@@ -48,7 +47,9 @@
                 </div>
               </div>
               <a class="navbar-item" href="map.html"> Map </a>
-              <a class="navbar-item" href="editpage.html"> Edit Page </a>
+              <a class="navbar-item is-active" href="editpage.html">
+                Edit Page
+              </a>
             </div>
           </div>
           <div class="column right is-flex is-justify-content-flex-end">
@@ -94,17 +95,93 @@
           </div>
         </div>
       </div>
-      <div class="hero-body is-flex-direction-column">
-        <h1
-          style="
-            font-family: 'Nanum Pen Script', cursive;
-            font-size: 70px;
-            color: #363636;
-          "
-        >
-          Where I've been!
-        </h1>
-        <div class="columns is-multiline" id="cardContainer"></div>
+
+      <div
+        class="container is-fluid is-flex is-flex-direction-column is-justify-content-center"
+      >
+        <div class="columns">
+          <div class="column is-half">
+            <h1
+              class="title"
+              style="
+                font-family: 'Nanum Pen Script', cursive;
+                font-size: 70px;
+                color: #363636;
+              "
+            >
+              Choose your style
+            </h1>
+            <form>
+              <div class="field">
+                <label class="label">Background Color</label>
+                <div class="control has-icons-left">
+                  <input
+                    id="selectedBC"
+                    class="input"
+                    type="color"
+                    value="#659157"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-pencil-square"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Text Color</label>
+                <div class="control has-icons-left">
+                  <input
+                    id="selectedTC"
+                    class="input"
+                    type="color"
+                    value="#A1C084"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-font"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Font Size</label>
+                <div class="control has-icons-left">
+                  <input id="selectedFS" class="input" type="text" />
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-text-height"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button id="saveChanges" class="button is-link">
+                    Save Changes
+                  </button>
+                </div>
+                <div class="control">
+                  <button id="cancelChanges" class="button is-link is-light">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="column is-half">
+            <h1
+              style="
+                font-family: 'Nanum Pen Script', cursive;
+                font-size: 70px;
+                color: #363636;
+              "
+            >
+              List of Styles
+            </h1>
+            <div class="box">
+              <ul id="stylesList"></ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -115,6 +192,6 @@
         </p>
       </div>
     </footer>
-    <script src="./JS/destinations.js"></script>
+    <script src="./JS/editpage.js"></script>
   </body>
 </html>
