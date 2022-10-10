@@ -65,8 +65,6 @@ stylesList.addEventListener("click", function (event) {
 
     let styleDetails = newArray[index].childNodes[index].data.split(" ");
 
-    console.log(styleDetails);
-
     container.style.backgroundColor = styleDetails[0];
     title.style.color = styleDetails[2];
     title.style.fontSize = styleDetails[4];
