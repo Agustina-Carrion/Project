@@ -26,7 +26,7 @@ function save() {
 
 function load() {
   const newStyle = localStorage.getItem("newStyle");
-  newStyles = JSON.parse(newStyle);
+  newStyles = JSON.parse(newStyle) || [];
 }
 
 let newArray = [];
@@ -63,11 +63,15 @@ stylesList.addEventListener("click", function (event) {
     const title = document.querySelector(".title");
     convertListIntoArray();
 
-    let styleDetails = newArray[index].childNodes[index].data.split(" ");
+    container.style.backgroundColor = newStyles[index].backgroundColor;
+    title.style.color = newStyles[index].textColor;
+    title.style.fontSize = newStyles[index].fontSize;
 
-    container.style.backgroundColor = styleDetails[0];
-    title.style.color = styleDetails[2];
-    title.style.fontSize = styleDetails[4];
+    // let styleDetails = newArray[index].childNodes[0].data.split(" ");
+
+    // container.style.backgroundColor = styleDetails[0];
+    // title.style.color = styleDetails[2];
+    // title.style.fontSize = styleDetails[4];
   } else if (button.textContent === "Delete Changes") {
     const result = confirm("Are you sure?");
     if (result) {
